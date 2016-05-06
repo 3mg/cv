@@ -1,0 +1,159 @@
+%% Copyright 2013 BarD Software s.r.o
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% === Стандартный moderncv и стандартные темы ===
+% === Компилируются pdflatex'ом               ===
+% \documentclass[11pt,a4paper]{moderncv}
+% \moderncvtheme[grey]{classic}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T2A]{fontenc}
+% \usepackage[english,russian]{babel}
+
+% === moderncv модифицированный для использования с XeLaTeX и фирменная тема ===
+\documentclass[11pt,a4paper]{moderncv-xetex}
+\moderncvtheme[grey]{papeeria}
+\usepackage{xcolor}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{microtype}
+
+\usepackage{graphicx}
+
+\newfontfamily\cyrillicfont{CMU Serif}[Script=Cyrillic]
+\newfontfamily\cyrillicfontsf{CMU Sans Serif}[Script=Cyrillic]
+\newfontfamily\cyrillicfonttt{CMU Typewriter Text}[Script=Cyrillic]
+
+\setmainlanguage{russian} 
+
+
+% Шапeка
+\firstname{Николай}\familyname{Савченко}
+%\title{сюда можно вписать что-нибудь в качестве заголовка}
+%\address{ул. Гарнизонная, 8}{Ставрополь}
+\mobile{skype: your\_skype\_login}
+%\phone{}
+\email{3mg@bk.ru}
+\extrainfo{ \url{https://github.com/3mg} }
+\quote{Веб-программист, опыт разработки -- \newline 8 лет.}
+%\quote{Программист с опытом web-разработки 4 года. Претендую на позицию senior php developer или senior fullstack developer или middle software engineer (ios, android)}
+\photo[64pt]{photo.jpg}
+%\nopagenumbers{}
+
+\begin{document}
+	\maketitle
+	
+	% ОПЫТ РАБОТЫ --------------------------------------------------------
+	\section{Опыт работы}
+	%\subsection{По специальности}
+	\cventry{2016--по сей день}{senior php developer / team lead / ruby, js, solidity developer}{NDA}{Riga}{}
+	{}
+	\cventry{2016}{mid php developer}{NDA}{Los Angeles}{}
+	{}
+	\cventry{2013--2016}{fullstack web developer}{Rispo service}{Ставрополь}{}
+	{Разработка и поддержка web-сайтов (php/symfony2), разработка клиентского и серверного ПО (c++, qt) }
+	\cventry{2012--2013}{web/mobile developer}{KiotLab}{Ставрополь}{}
+	{}
+	\cventry{2009--2012}{С\#, JS intern / junior developer}{freelance / стажировка в организациях (NDA)}{Ставрополь, Москва}{}
+	{}
+	
+	% ТЕХНИЧЕСКИЕ НАВЫКИ -------------------------------------------------
+	\section{Технические навыки}
+	\cvline{-}{Разработка веб-сайтов и одностраничных веб-приложений}
+	\cvline{-}{Разработка linux и windows приложений}
+	\cvline{-}{Кроссплатформенная pixel-perfect верстка, владею технологиями БЭМ/RSCSS/SMACSS. Отлично знаю особенности верстки под различные версии iOS и Android. Верстка под устаревшие платформы}
+	\cvline{-}{Разработка смарт-контрактов и Dapp для Etherium и RSK. Техническое сопровождение проведения ICO}
+	\cvline{-}{Проектирование высоконагруженных веб-проектов}
+	\cvline{Технологии,\\фреймворки,\\ЯП}{\textbf{Использую в повседневной работе:} \newline
+		PHP (5.4 - 7.1/hhvm, Symfony 2/3/4, laravel 5),  \newline Node.js(Express, socket.io, web3),\newline
+		JS(ES5/ES6)/CS/TS(Angular 1/2+, backbone/marionette, react, d3, jquery, vanilla),\newline 
+		HTML, CSS/SASS/LESS (БЭМ, bootstap, foundation),\newline
+		Solidity, truffle, Swarm, IPFS \newline
+		\textbf{Знаю на уровне mid}: \newline
+		C\#, \newline
+		Java, \newline
+		C++(98, 03, STL, boost, Qt/QML), C(GNU), \newline
+		Python,\newline
+		Ruby, Rails 4/5, \newline
+		\textbf{Имею представление}:\newline
+		Haskell, R, Hadoop, Go, WebAssembly}
+	\cvline{Web servers}{Apache2, nginx}
+	\cvline{Базы данных}{MySQL, MSSQL, PostgreSQL, MongoDB, Redis, Jackrabbit}
+	\cvline{Инструменты}{git, gulp, grunt, vagrant, docker}
+	\cvline{Операционные системы}{MacOS, Debian/Ubuntu, Centos, Windows, \newline iOS, Android, Blackberry OS 10}
+	
+	% ОБРАЗОВАНИЕ --------------------------------------------------------
+	\section{Образование}
+	\cventry{2007\,--\,2012}{Специалист}{СевКавГТУ/СКФУ}{Ставрополь}{}{Факультет информационных технологий и телекоммуникаций}  % arguments 3 to 6 are optional
+	
+	% ДИПЛОМНАЯ РАБОТА ---------------------------------------------------
+	\section{Дипломная работа}
+	\cvline{Название}{\emph{Анализ возможности реализации различных архитектур нейронных сетей на аппаратной платформе Neuro-Matrix. Нейрон со счетчиком совпадений}}
+	\cvline{Науч. руководитель}{Мезенцева Оксана Станиславовна}
+	\cvline{Описание}{\small Проведен анализ методов аппаратной реализации нейрокомпьютеров. Проведено исследование неклассических моделей искусственных нейронов и нейронных сетей, реализация многослойного персептрона, состоящего из нейронов со счетчиком совпадений на аппаратной платформе процессора NM6403. Результаты проведенных исследований, представленные в работе, опубликованы в сборнике научных трудов пятой международной научно-технической конференции Инфоком, посвященной инфокоммуникационным технологиям в науке, производстве и образовании. }
+	
+	% ИНОСТРАННЫЕ ЯЗЫКИ --------------------------------------------------
+	\section{Иностранные языки}
+	\cvline{Английский}{Свободно читаю технические тексты и могу поддерживать разговор}
+	
+	% ХОББИ --------------------------------------------------------------
+	%\section{Хобби}
+	%\cvline{Геокешинг}{Люблю лазать по болотам в поисках кладов}
+	%\cvline{Прокрастинация}{Люблю лазать по сайтам в поисках мотиваторов и демотиваторов}
+	%\cvline{Скалолазание}{Просто люблю лазать}
+	
+	% СЕРТИФИКАТЫ -------------------------------------------------------
+	\section{Сертификаты}
+	\cvline{Program design}{https://stepik.org/certificate/ce408e538e3aa19c62b629213ea1d65c10675ded.pdf}
+	\cvline{Haskell}{https://stepik.org/certificate/9c81641e8dc608a04e3ab89a21812db82674e847.pdf}
+	\cvline{Java}{https://stepik.org/certificate/80444ebf6ceb6b37f00f902d29ba382031b25dd8.pdf}
+	\cvline{Web security}{https://stepik.org/certificate/9b3c6c8be17042d84664888f9d947472145bbf9a.pdf}
+	\cvline{C++}{https://stepik.org/certificate/05b2fe229c1b92568505584570a7ae91ae22f88e.pdf}
+	\cvline{Hadoop}{https://stepik.org/certificate/6954d3616e58c8814db8849fbcba7663f7c1648a.pdf}
+	\cvline{Neural newtworks/Python}{https://stepik.org/certificate/fb5b111cc9d52d24af66d616c90a45baa91f1a2e.pdf}
+	\cvline{Python}{https://stepik.org/certificate/e15569fa219edb3699b14f4a5359f0a93ddbe06e.pdf}
+	%http://www.upwork.com/o/profiles/users/_~0110514270da0c4505/
+	%zend certified engineer
+	%symfony certified developer (expert level)
+	
+	% РЕКОМЕНДАЦИИ -------------------------------------------------------
+	%\section{Рекомендации}
+	%\cvline{А.И. Привалов}{Заведующий вычислительным центром НИИЧаВо.\newline \href{mailto:privalov@nii4avo.ru}{privalov@nii4avo.ru}}
+	%\cvline{А. Балаганов}{Уполномоченный по копытам ООО <<Рога и Копыта>>\newline \href{mailto:balaganov@horns-and-hooves.com}{balaganov@horns-and-hooves.com}}
+	%\cvline{С.М. Брин}{Computer scientist, Internet entrepreneur\newline \href{mailto:theotherboss@google.com}{theotherboss@google.com}}
+	
+	% ПОРТФОЛИО  --------------------------------------------------------------
+	
+	\newpage
+	\section{Примеры работ}
+	\cvline{}{До 2016 года\newline}
+	\cvline{Основные проекты}{
+		%\url{https://sembly.run/} -- backend (laravel) \newline
+		\url{http://rusbuk.ru/} -- fullstack (symfony2, jQuery, backbone.js) \newline
+		\url{https://online-interview.}ru/ -- fullstack (symfony2 + node.js, angular) \newline
+		\url{http://bg26.ru}, http://card.vecom.su/, http://card.taho-rus.ru/  + ~15 поддоменов -- fullstack (symfony2, jQuery) \newline
+		http://стройбиржа.онлайн/ -- fullstack (symfony2, angular) 
+	}
+	\cvline{Еще}{
+		\url{http://invcad.ru/} -- информационный сайт (laravel) \newline
+		\url{http://savtrade.ru/} -- система управления задачами (symfony2)  \newline
+		\url{http://nyusell.ru/} -- система лояльности (symfony2)  \newline
+		\url{http://rispo.ru/} -- вёрстка  \newline
+		\url{http://rispo.ru/works/portfolio_soft/for-server/81} -- developer (c++, php, js)  \newline
+		\url{http://rispo.ru/works/portfolio_soft/for-pc/205} -- developer (Qt) \newline
+		\url{http://vip.hoz-mir.ru/} -- верстка меню, сопровождение \newline
+		http://уук.com/ -- верстка; частично бэкенд (laravel)  \newline
+		\url{http://aquastroyst.ru/} -- сопровождение, вёрстка (bitrix)  \newline
+		\url{http://chimera48.ru/} -- вёрстка  \newline
+		\url{http://volcangame.com/} -- fullstack (symfony2, angular)  \newline
+		\url{https://interexpo.center/} -- fullstack (symfony2 + node.js, angular)  \newline
+		\url{http://otdamdrugim.ru/}  -- fullstack (symfony2, angular)  \newline
+		\url{http://crm.bg26.ru/} -- fullstack (symfony2, angular)
+	}
+	
+\end{document}
+
